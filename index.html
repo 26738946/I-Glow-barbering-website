@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I-Glow Salon & Spa | Luxury Grooming, Lagos</title>
+<meta name="description" content="I-Glow Salon & Spa — premium haircuts, skin fades, beard grooming, dreadlocks, spa treatments and home service. Where confidence meets luxury.">
+
+<!-- Fonts: Fraunces (display, characterful serif) + Inter (body, clean grotesque) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader">
+  <div class="loader__mark">
+    <span class="loader__glow"></span>
+    <span class="loader__word">I-Glow</span>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">I-Glow <span>Salon &amp; Spa</span></a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#training">Training</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#policy">Policy</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#book" class="btn btn--ghost nav__cta">Book Appointment</a>
+
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu__links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#training">Training</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#policy">Policy</a>
+    <a href="#contact">Contact</a>
+    <a href="#book" class="btn btn--solid">Book Appointment</a>
+  </nav>
+</div>
+
+<main>
+
+  <!-- ============ 1. HOME / HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow reveal">I-Glow Salon &amp; Spa</p>
+      <h1 class="hero__title">
+        <span class="reveal-line"><span class="reveal-line__inner">Premium Grooming</span></span>
+        <span class="reveal-line"><span class="reveal-line__inner">for Every</span></span>
+        <span class="reveal-line"><span class="reveal-line__inner">Lifestyle.<em>.</em></span></span>
+      </h1>
+      <p class="hero__tagline reveal">Where Confidence Meets Luxury.</p>
+      <p class="hero__sub reveal">Premium barbering, salon services, spa treatments, dreadlocks, hair colouring, beauty care, and luxury grooming for men and women.</p>
+
+      <div class="hero__actions reveal">
+        <a href="#book" class="btn btn--solid">Book Appointment</a>
+        <a href="#services" class="btn btn--outline">Our Services</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span></span>
+      <p>Scroll</p>
+    </div>
+  </section>
+
+  <!-- ============ 2. ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner about__grid">
+
+      <div class="about__text">
+        <p class="eyebrow reveal">About I-Glow</p>
+        <h2 class="section-title reveal">A standard, <em>not a service.</em></h2>
+        <p class="reveal">I-Glow Salon &amp; Spa was built on a simple idea: grooming should feel like an occasion, not an errand. Every fade, every beard line, every treatment is handled with the same discipline you'd expect from a tailor cutting a suit deliberate, unhurried, exact.</p>
+        <p class="reveal">From our chairs in Kwara to your doorstep with our home service, we bring the same premium standard everywhere we work. Our mission is simple: give every client a reason to walk out standing a little taller.</p>
+      </div>
+
+      <div class="about__stats">
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="1200">0</span><span class="stat-card__plus">+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="7">0</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="8500">0</span><span class="stat-card__plus">+</span>
+          <p>Haircuts Completed</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-card__num" data-count="98">0</span><span class="stat-card__percent">%</span>
+          <p>Customer Satisfaction</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 3. SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="section-inner">
+      <p class="eyebrow reveal center">What We Do</p>
+      <h2 class="section-title reveal center">Services, done properly.</h2>
+
+      <div class="services__grid" id="servicesGrid">
+        <!-- Cards injected by script.js from data below, but kept static here for no-JS fallback / SEO -->
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="scissors"></span></div>
+          <h3>Professional Haircuts</h3>
+          <p>Precision cuts tailored to your face shape and style, finished to the last hair.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="fade"></span></div>
+          <h3>Skin Fades</h3>
+          <p>Razor-sharp skin fades — low, mid, or high — blended with zero harsh lines.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="beard"></span></div>
+          <h3>Beard Grooming</h3>
+          <p>Shape, line-up and condition for a beard that holds its edge all week.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="dye"></span></div>
+          <h3>Hair Dye</h3>
+          <p>Colour work done with premium products and a steady, experienced hand.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="treatment"></span></div>
+          <h3>Hair Treatment</h3>
+          <p>Deep conditioning and scalp treatments that restore shine and strength.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="locs"></span></div>
+          <h3>Dreadlocks</h3>
+          <p>Fresh starts and maintenance for locs, styled with patience and precision.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="relock"></span></div>
+          <h3>Relocking</h3>
+          <p>Root-to-tip relocking that keeps your locs neat without losing length.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="spa"></span></div>
+          <h3>Spa Services</h3>
+          <p>Facials and scalp massages that turn a haircut into a full reset.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon"><span class="icon" data-icon="home"></span></div>
+          <h3>Home Service</h3>
+          <p>The full I-Glow experience, brought to your home or office on request.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+ <!-- ============ 4. GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <p class="eyebrow reveal center">Our Work</p>
+      <h2 class="section-title reveal center">Fresh cuts, on record.</h2>
+
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Photo 1 -->
+        <div class="gallery-item reveal-up" data-category="haircut">
+          <img src="image 1.jpg" alt="Taper Fade" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item reveal-up delay-1" data-category="colour">
+          <img src="image 2.jpg" alt="Green Hair Colour" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item reveal-up delay-2" data-category="haircut">
+          <img src="image 3.jpg" alt="Cornrows and Fade" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item reveal-up delay-1" data-category="fade">
+          <img src="image 4.jpg" alt="Afro Skin Fade" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item reveal-up delay-2" data-category="fade">
+          <img src="image 5.jpg" alt="Low Skin Fade" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item reveal-up delay-2" data-category="fade">
+          <img src="images/image6.jpg" alt="skin" class="gallery-real-img" />
+          <div class="gallery-hover"><i class="fas fa-expand"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ============ 5. TRAINING ============ -->
+  <section class="training" id="training">
+    <div class="training__glow" aria-hidden="true"></div>
+    <div class="section-inner training__grid">
+      <div class="training__intro">
+        <p class="eyebrow reveal">I-Glow Academy</p>
+        <h2 class="section-title reveal">Train under the standard.</h2>
+        <p class="reveal">We train the next generation of barbers and stylists the same way we cut hair — properly, with no shortcuts. Learn on real clients, under real pressure, with certification that means something.</p>
+        <a href="#book" class="btn btn--outline reveal">Register Now</a>
+      </div>
+
+      <div class="training__cards">
+        <div class="training-card reveal">
+          <span class="training-card__tag">Level 01</span>
+          <h3>Beginner Classes</h3>
+          <p>Foundations of cutting, fading and tool handling for complete beginners.</p>
+        </div>
+        <div class="training-card reveal">
+          <span class="training-card__tag">Level 02</span>
+          <h3>Advanced Training</h3>
+          <p>Advanced fades, colour theory and beard sculpting for working barbers.</p>
+        </div>
+        <div class="training-card reveal">
+          <span class="training-card__tag">Level 03</span>
+          <h3>Practical Sessions</h3>
+          <p>Supervised, hands-on sessions with real clients in the salon floor.</p>
+        </div>
+        <div class="training-card reveal">
+          <span class="training-card__tag">Level 04</span>
+          <h3>Certification</h3>
+          <p>Assessed final projects with an I-Glow Academy certificate on completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. REVIEWS ============ -->
+  <section class="reviews" id="reviews">
+    <div class="section-inner">
+      <p class="eyebrow reveal center">Client Words</p>
+      <h2 class="section-title reveal center">Trusted by regulars.</h2>
+
+      <div class="reviews__slider" id="reviewsSlider">
+        <div class="reviews__track" id="reviewsTrack"><!-- injected by script.js --></div>
+        <div class="reviews__dots" id="reviewsDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. POLICY ============ -->
+  <section class="policy" id="policy">
+    <div class="section-inner">
+      <p class="eyebrow reveal center">Good To Know</p>
+      <h2 class="section-title reveal center">Our policies.</h2>
+
+      <div class="policy__grid">
+        <details class="policy-card reveal" open>
+          <summary>Appointment Policy <span>+</span></summary>
+          <p>Appointments are confirmed on WhatsApp. Please arrive 10 minutes early — slots not honoured after a 15-minute grace period may be reassigned.</p>
+        </details>
+        <details class="policy-card reveal">
+          <summary>Cancellation Policy <span>+</span></summary>
+          <p>Cancel or reschedule at least 3 hours before your slot. Repeated no-shows may require a deposit for future bookings.</p>
+        </details>
+        <details class="policy-card reveal">
+          <summary>Home Service Policy <span>+</span></summary>
+          <p>Home service is available within Lagos on request, subject to distance and a call-out fee confirmed at booking.</p>
+        </details>
+        <details class="policy-card reveal">
+          <summary>Hygiene Policy <span>+</span></summary>
+          <p>All tools are sanitised between every client. Fresh blades and disposables are used where applicable, always.</p>
+        </details>
+        <details class="policy-card reveal">
+          <summary>Privacy Policy <span>+</span></summary>
+          <p>Your contact details are used only to confirm bookings and share offers you've opted into — never sold or shared.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. BOOK NOW ============ -->
+  <section class="book" id="book">
+    <div class="book__glow" aria-hidden="true"></div>
+    <div class="section-inner book__grid">
+      <div class="book__intro">
+        <p class="eyebrow reveal">Reserve Your Slot</p>
+        <h2 class="section-title reveal">Book your <em>appointment.</em></h2>
+        <p class="reveal">Fill the form and we'll confirm your slot on WhatsApp within the hour. Prefer to book directly? Message us instead.</p>
+        <a href="#" class="btn btn--outline reveal" id="bookWhatsapp">Book via WhatsApp</a>
+      </div>
+
+      <form class="book__form reveal" id="bookingForm" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+          <span class="form-error" id="err-fullName"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="0801 234 5678" required>
+          <span class="form-error" id="err-phone"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option>Professional Haircut</option>
+            <option>Skin Fade</option>
+            <option>Beard Grooming</option>
+            <option>Hair Dye</option>
+            <option>Hair Treatment</option>
+            <option>Dreadlocks</option>
+            <option>Relocking</option>
+            <option>Spa Services</option>
+            <option>Home Service</option>
+          </select>
+          <span class="form-error" id="err-service"></span>
+        </div>
+
+        <div class="form-row form-row--split">
+          <div>
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" required>
+            <span class="form-error" id="err-date"></span>
+          </div>
+          <div>
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required>
+            <span class="form-error" id="err-time"></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Anything we should know?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--solid book__submit">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ 7. CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact__grid">
+      <div>
+        <p class="eyebrow reveal">Get In Touch</p>
+        <h2 class="section-title reveal">Come glow with us.</h2>
+        <p class="reveal">Questions, custom requests, or just want to talk hair? Reach us any of these ways.</p>
+      </div>
+
+      <div class="contact__cards">
+        <a href="tel:+2348000000000" class="contact-card reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="phone"></span></span>
+          <div>
+            <h3>Call Us</h3>
+            <p>+234 800 000 0000</p>
+          </div>
+        </a>
+        <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="whatsapp"></span></span>
+          <div>
+            <h3>WhatsApp</h3>
+            <p>Chat with us instantly</p>
+          </div>
+        </a>
+        <a href="https://instagram.com/iglowsalon" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="instagram"></span></span>
+          <div>
+            <h3>Instagram</h3>
+            <p>@iglowsalon</p>
+          </div>
+        </a>
+        <a href="https://tiktok.com/@iglowsalon" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="tiktok"></span></span>
+          <div>
+            <h3>TikTok</h3>
+            <p>@iglowsalon</p>
+          </div>
+        </a>
+        <a href="https://facebook.com/iglowsalon" target="_blank" rel="noopener" class="contact-card reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="facebook"></span></span>
+          <div>
+            <h3>Facebook</h3>
+            <p>I-Glow Salon &amp; Spa</p>
+          </div>
+        </a>
+        <div class="contact-card contact-card--static reveal">
+          <span class="contact-card__icon"><span class="icon" data-icon="pin"></span></span>
+          <div>
+            <h3>Visit Us</h3>
+            <p>Address to be added</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="section-inner footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="nav__logo">I-Glow <span>Salon &amp; Spa</span></a>
+      <p>Where Confidence Meets Luxury.</p>
+      <div class="footer__socials">
+        <a href="https://instagram.com/iglowsalon" target="_blank" rel="noopener" aria-label="Instagram"><span class="icon" data-icon="instagram"></span></a>
+        <a href="https://tiktok.com/@iglowsalon" target="_blank" rel="noopener" aria-label="TikTok"><span class="icon" data-icon="tiktok"></span></a>
+        <a href="https://facebook.com/iglowsalon" target="_blank" rel="noopener" aria-label="Facebook"><span class="icon" data-icon="facebook"></span></a>
+        <a href="https://wa.me/2348000000000" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="icon" data-icon="whatsapp"></span></a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#training">Training</a>
+      <a href="#policy">Policy</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Services</h4>
+      <a href="#services">Haircuts &amp; Fades</a>
+      <a href="#services">Beard Grooming</a>
+      <a href="#services">Spa Services</a>
+      <a href="#services">Home Service</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <a href="tel:+2348000000000">+234 800 000 0000</a>
+      <a href="https://wa.me/2348000000000" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+
+  <div class="footer__bottom section-inner">
+    <p>&copy; <span id="year"></span> I-Glow Salon &amp; Spa. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/2348000000000" target="_blank" rel="noopener" class="float-whatsapp" aria-label="Chat on WhatsApp">
+  <span class="icon" data-icon="whatsapp"></span>
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><span class="icon" data-icon="arrowUp"></span></button>
+
+<!-- Toast container -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
