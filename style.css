@@ -7,6 +7,10 @@
    Body/UI type: Inter
    ========================================================= */
 
+   html, body {
+  overflow-x: hidden;
+}
+
 :root {
   /* ---- Color tokens ---- */
   --bg-deep: #0A0A0A;        /* primary dark background — near-black, matches the logo */
@@ -360,6 +364,31 @@ ul { list-style: none; }
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero__bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+.hero__bg-slide.is-active {
+  opacity: 1;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,0.75) 0%, rgba(10,10,10,0.55) 40%, rgba(10,10,10,0.85) 100%);
+}
 
 /* =========================================================
    ABOUT

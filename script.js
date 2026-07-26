@@ -12,12 +12,13 @@
    8. Reviews data + render + slider
    9. Booking form validation + toast + WhatsApp handoff
    10. Back-to-top button
+   11. Hero background slideshow
    ========================================================= */
 
 /* ---------------------------------------------------------
    0. CONFIG — edit these in one place
    --------------------------------------------------------- */
-const WHATSAPP_NUMBER = "2348000000000"; // change to real I-Glow WhatsApp number (no + or leading 0s)
+const WHATSAPP_NUMBER = "+2349135995379"; // change to real I-Glow WhatsApp number (no + or leading 0s)
 
 /* ---------------------------------------------------------
    1. ICONS — inline SVG library, injected into [data-icon] spans
@@ -60,7 +61,6 @@ function initLoader() {
       hero.classList.add("is-ready");
     }, 500);
   });
-  // Fallback in case 'load' already fired or is slow to fire
   setTimeout(() => {
     loader.classList.add("is-hidden");
     hero.classList.add("is-ready");
@@ -129,7 +129,7 @@ function initCounters() {
 
         function tick(now) {
           const progress = Math.min((now - start) / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
           el.textContent = Math.round(eased * target).toLocaleString();
           if (progress < 1) requestAnimationFrame(tick);
         }
@@ -143,14 +143,9 @@ function initCounters() {
 }
 
 /* ---------------------------------------------------------
-   6. SERVICES — data lives here; edit this array to change
-   services shown. HTML already has a static fallback markup,
-   so this render is optional visual polish (re-renders with
-   consistent icon markup) but we skip re-render to respect
-   the SEO-friendly static markup already in index.html.
+   6. SERVICES — static markup in index.html is the source of
+   truth; nothing to render here.
    --------------------------------------------------------- */
-// (Static markup in index.html is source of truth for services —
-// intentionally not overwritten by JS so content stays crawlable.)
 
 /* ---------------------------------------------------------
    7. GALLERY — the photos themselves are static <img> markup
@@ -310,7 +305,6 @@ function initBookingForm() {
     }, 900);
   });
 
-  // Direct "Book via WhatsApp" link (no form needed)
   const directLink = document.getElementById("bookWhatsapp");
   directLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20I-Glow%20Salon%20%26%20Spa%2C%20I%27d%20like%20to%20book%20an%20appointment.`;
   directLink.target = "_blank";
@@ -331,6 +325,20 @@ function initBackToTop() {
 }
 
 /* ---------------------------------------------------------
+   11. HERO BACKGROUND SLIDESHOW
+   --------------------------------------------------------- */
+function initHeroSlideshow() {
+  const slides = document.querySelectorAll(".hero__bg-slide");
+  if (!slides.length) return;
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove("is-active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("is-active");
+  }, 5000);
+}
+
+/* ---------------------------------------------------------
    INIT — runs after DOM is parsed
    --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
@@ -340,6 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveal();
   initCounters();
   initGalleryReveal();
+  initHeroSlideshow();
   renderReviews();
   initReviewsSlider();
   initBookingForm();
