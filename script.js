@@ -13,12 +13,13 @@
    9. Booking form validation + toast + WhatsApp handoff
    10. Back-to-top button
    11. Hero background slideshow
+   12. Training program WhatsApp enquiry link
    ========================================================= */
 
 /* ---------------------------------------------------------
    0. CONFIG — edit these in one place
    --------------------------------------------------------- */
-const WHATSAPP_NUMBER = "+2349135995379"; // change to real I-Glow WhatsApp number (no + or leading 0s)
+const WHATSAPP_NUMBER = "2349135995379"; // no + and no leading zero — matches wa.me format
 
 /* ---------------------------------------------------------
    1. ICONS — inline SVG library, injected into [data-icon] spans
@@ -339,6 +340,19 @@ function initHeroSlideshow() {
 }
 
 /* ---------------------------------------------------------
+   12. TRAINING PROGRAM — WhatsApp enquiry link
+   Pre-fills a WhatsApp message asking about the I-Glow Academy
+   program and pricing. Wires up the #trainingWhatsapp button
+   from the training section.
+   --------------------------------------------------------- */
+function initTrainingWhatsapp() {
+  const link = document.getElementById("trainingWhatsapp");
+  if (!link) return;
+  const message = "Hi, I'd like to discuss the I-Glow Academy training program and pricing.";
+  link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+/* ---------------------------------------------------------
    INIT — runs after DOM is parsed
    --------------------------------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
@@ -352,6 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderReviews();
   initReviewsSlider();
   initBookingForm();
+  initTrainingWhatsapp();
   initBackToTop();
 
   document.getElementById("year").textContent = new Date().getFullYear();
